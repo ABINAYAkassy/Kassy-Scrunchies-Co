@@ -5,25 +5,27 @@ body {
     background-color: #f8f9fa;
 }
 
-/* HEADER STYLING */
 header {
     background-color: lavender;
     padding: 20px;
     text-align: center;
+    font-size: 24px;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background: white;
-    padding: 10px;
+    background: lavender;
+    padding: 15px 0;
 }
 
 nav ul li {
     position: relative;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -31,28 +33,35 @@ nav ul li a {
     font-weight: bold;
     color: black;
     padding: 10px;
+    display: block;
 }
 
-/* DROPDOWN MENU */
+/* Dropdown Menu */
 .dropdown-menu {
     display: none;
     position: absolute;
     background: white;
-    box-shadow: 2px 2px 10px gray;
-    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     list-style: none;
-    top: 30px;
-    left: 0;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    font-weight: normal;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.dropdown-menu li {
-    padding: 5px 0;
-}
-
+/* Products Section */
 #products {
     text-align: center;
     margin: 20px;
@@ -67,28 +76,3 @@ nav ul li a {
 .product {
     background: white;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px gray;
-    width: 200px;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-button {
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: lavender;
-    margin-top: 20px;
-}
