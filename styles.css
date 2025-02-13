@@ -9,7 +9,7 @@ header {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 nav {
@@ -20,15 +20,15 @@ nav {
 }
 
 .logo img {
-    height: 120px; /* Bigger logo */
+    height: 200px; /* Doubled the size of the logo */
     width: auto;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin-left: auto; /* Moves menu to right */
+    gap: 40px;
+    margin: 0 auto; /* Centers the menu */
 }
 
 .nav-menu li {
@@ -43,14 +43,12 @@ nav {
     font-weight: bold;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fce8e6;
-    padding: 10px;
-    border-radius: 5px;
+.icons {
+    display: flex;
+    gap: 20px;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+.icons a {
+    color: #8a4f5d;
+    font-size: 20px;
 }
