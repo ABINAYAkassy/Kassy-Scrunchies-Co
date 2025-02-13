@@ -3,124 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kassy Scrunchies & Co.</title>
+    <title>Kassy Scrunchies & Co</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F8F1F1;
-        }
-
-        .scroll-banner {
-            background-color: #FFD1DC;
-            color: #333;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            font-weight: bold;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #FAE1DD;
-            padding: 15px 30px;
-        }
-
-        .logo img {
-            height: 60px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #6A0572;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .icons .icon {
-            color: #6A0572;
-            font-size: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const messages = [
-                "Free delivery above 500 rupees",
-                "For international orders, contact directly on Instagram or WhatsApp",
-                "Bulk and wholesale orders are accepted"
-            ];
-            let index = 0;
-            const textElement = document.getElementById("scroll-text");
-
-            function changeMessage() {
-                index = (index + 1) % messages.length;
-                textElement.textContent = messages[index];
-            }
-
-            setInterval(changeMessage, 3000);
-        });
-    </script>
 </head>
 <body>
-    <header>
-        <!-- Scrolling Text Banner -->
-        <div class="scroll-banner">
-            <p id="scroll-text">Free delivery above 500 rupees</p>
+
+    <!-- Scrolling Banner (Red Section) -->
+    <div class="scroll-banner">
+        <p id="scroll-text">Free delivery above 500 rupees</p>
+    </div>
+
+    <!-- Navigation Bar (Blue Section) -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Kassy Scrunchies & Co">
         </div>
-        
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="logo">
-                <img src="your-logo.png" alt="Kassy Scrunchies & Co.">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="icons">
-                <a href="#" class="icon"><i class="fas fa-search"></i></a>
-                <a href="#" class="icon"><i class="fas fa-heart"></i></a>
-                <a href="#" class="icon"><i class="fas fa-user"></i></a>
-                <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </nav>
-    </header>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Shop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Scrunchies</a></li>
+                    <li><a href="#">Headbands</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Icons (Green Section) -->
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+    <script>
+        // Scrolling Banner Logic
+        const messages = [
+            "Free delivery above 500 rupees",
+            "For international orders, contact directly on Instagram or WhatsApp",
+            "Bulk and wholesale orders are accepted"
+        ];
+        let index = 0;
+
+        function changeMessage() {
+            document.getElementById("scroll-text").innerText = messages[index];
+            index = (index + 1) % messages.length;
+        }
+
+        setInterval(changeMessage, 3000);
+    </script>
+
 </body>
 </html>
