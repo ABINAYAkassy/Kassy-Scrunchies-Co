@@ -8,59 +8,45 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Scrolling Banner (Red Section) -->
-    <div class="scroll-banner">
-        <p id="scroll-text">Free delivery above 500 rupees</p>
-    </div>
-
-    <!-- Navigation Bar (Blue Section) -->
-    <nav class="navbar">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="logo.png" alt="Kassy Scrunchies & Co">
+    <header>
+        <div class="announcement-bar">
+            <p id="announcement-text">Free delivery above 500 rupees</p>
         </div>
-
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Shop</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Scrunchies</a></li>
-                    <li><a href="#">Headbands</a></li>
-                    <li><a href="#">Accessories</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-        <!-- Icons (Green Section) -->
-        <div class="icons">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>
+        <nav class="navbar">
+            <img src="logo.png" alt="Kassy Scrunchies & Co Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="far fa-heart"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <div class="banner-overlay">
+            <h1>Elevate Your Style with Kassy Scrunchies</h1>
         </div>
-    </nav>
+    </section>
 
     <script>
-        // Scrolling Banner Logic
-        const messages = [
+        const texts = [
             "Free delivery above 500 rupees",
             "For international orders, contact directly on Instagram or WhatsApp",
             "Bulk and wholesale orders are accepted"
         ];
         let index = 0;
-
-        function changeMessage() {
-            document.getElementById("scroll-text").innerText = messages[index];
-            index = (index + 1) % messages.length;
+        function changeText() {
+            document.getElementById("announcement-text").innerText = texts[index];
+            index = (index + 1) % texts.length;
         }
-
-        setInterval(changeMessage, 3000);
+        setInterval(changeText, 3000);
     </script>
-
 </body>
 </html>
