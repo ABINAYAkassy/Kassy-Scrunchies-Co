@@ -1,108 +1,65 @@
+/* GENERAL STYLES */
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #FFF5F5; /* Pastel background */
 }
 
+/* HEADER STYLES */
 header {
-    background-color: lavender;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FBE4E4; /* Soft pastel color */
+    border-bottom: 2px solid #E8C4C4; /* Subtle border */
 }
 
-nav ul {
+/* LOGO */
+header img {
+    height: 60px;
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
     list-style: none;
+    display: flex;
+    gap: 20px;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    background: lavender;
-    padding: 15px 0;
 }
 
-nav ul li {
+.nav-menu li {
     position: relative;
-    margin: 0 15px;
 }
 
-nav ul li a {
+.nav-menu li a {
     text-decoration: none;
-    font-weight: bold;
-    color: black;
+    font-size: 18px;
+    color: #8B5D5D; /* Matching text color */
     padding: 10px;
     display: block;
 }
 
+/* DROPDOWN MENU */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #FEECEC;
     list-style: none;
-    padding: 10px 0;
-    min-width: 200px;
+    padding: 0;
+    margin: 0;
+    width: 180px;
     border-radius: 5px;
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu li a {
-    color: black;
-    font-weight: normal;
+    padding: 10px;
+    color: #8B5D5D;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
-}
-
-#products {
-    text-align: center;
-    margin: 20px;
-}
-
-.product-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px gray;
-    width: 200px;
-    text-align: center;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-button {
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: darkviolet;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: lavender;
-    margin-top: 20px;
 }
