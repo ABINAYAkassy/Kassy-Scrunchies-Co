@@ -1,12 +1,12 @@
 body {
     background-color: #fdf8f5; /* Light pastel background */
-    font-family: "Arial", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #6d4c41; /* Soft brown text */
 }
 
 header {
     background-color: #fce8e6; /* Soft pastel pink */
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,15 +19,16 @@ nav {
     justify-content: space-between;
 }
 
-nav img {
-    height: 80px; /* Adjust the logo size */
+.logo img {
+    height: 120px; /* Bigger logo */
     width: auto;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin-left: auto; /* Moves menu to right */
 }
 
 .nav-menu li {
@@ -38,6 +39,7 @@ nav img {
     text-decoration: none;
     color: #8a4f5d; /* Soft muted purple */
     font-size: 18px;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
 }
 
@@ -52,4 +54,3 @@ nav img {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
