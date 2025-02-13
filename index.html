@@ -4,49 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kassy Scrunchies & Co</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .scrolling-text {
+            background-color: #ffcccc;
+            color: #7a3b2e;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b3d9d9;
+            padding: 15px 20px;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="announcement-bar">
-            <p id="announcement-text">Free delivery above 500 rupees</p>
-        </div>
-        <nav class="navbar">
-            <img src="logo.png" alt="Kassy Scrunchies & Co Logo" class="logo">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <i class="fas fa-search"></i>
-                <i class="far fa-heart"></i>
-                <i class="fas fa-user"></i>
-                <i class="fas fa-shopping-cart"></i>
-            </div>
-        </nav>
-    </header>
+    <div class="scrolling-text" id="scroll-text">Free shipping on orders above ₹500</div>
     
-    <section class="banner">
-        <div class="banner-overlay">
-            <h1>Elevate Your Style with Kassy Scrunchies</h1>
+    <div class="header">
+        <div class="logo">
+            <img src="your-logo.png" alt="Kassy Scrunchies & Co Logo">
         </div>
-    </section>
-
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+        <div class="icons">
+            <span>🔍</span>
+            <span>❤️</span>
+            <span>👤</span>
+            <span>🛒</span>
+        </div>
+    </div>
+    
+    <img src="https://i.postimg.cc/fymbd0wH/20250213-145656-0000.png" class="banner" alt="Kassy Scrunchies Banner">
+    
     <script>
-        const texts = [
-            "Free delivery above 500 rupees",
-            "For international orders, contact directly on Instagram or WhatsApp",
-            "Bulk and wholesale orders are accepted"
+        let texts = [
+            "Free shipping on orders above ₹500",
+            "For international orders, contact us on Instagram or WhatsApp",
+            "Bulk and wholesale orders available"
         ];
         let index = 0;
         function changeText() {
-            document.getElementById("announcement-text").innerText = texts[index];
+            document.getElementById("scroll-text").innerText = texts[index];
             index = (index + 1) % texts.length;
         }
-        setInterval(changeText, 3000);
+        setInterval(changeText, 4000);
     </script>
 </body>
 </html>
+
