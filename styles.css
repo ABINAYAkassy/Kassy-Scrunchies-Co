@@ -6,13 +6,12 @@
 }
 
 body {
-    background-color: #fdf7f4; /* Light pastel shade */
+    background-color: #fdf9f6;
 }
 
-/* Header */
 header {
-    background-color: #fce8e6; /* Soft pink */
-    padding: 15px 0;
+    background-color: #fde8e8;
+    padding: 10px 0;
 }
 
 nav {
@@ -21,45 +20,56 @@ nav {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    padding: 0 20px;
 }
 
-/* Logo Styling */
 .logo img {
-    height: 160px; /* Increased size */
+    height: 120px;  /* Adjusted to make the logo bigger */
     width: auto;
 }
 
-/* Navigation Menu */
 .nav-menu {
-    display: flex;
     list-style: none;
-    gap: 30px;
-    font-size: 18px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    position: relative;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #824d4d;
+    color: #5a3e36;
+    font-size: 18px;
     font-weight: 500;
-    transition: 0.3s;
 }
 
-.nav-menu a:hover {
-    color: #d9534f;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fde8e8;
+    padding: 10px;
+    top: 30px;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Icons */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
 .icons {
     display: flex;
     gap: 15px;
 }
 
 .icons a {
-    color: #824d4d;
-    font-size: 22px;
-    transition: 0.3s;
-}
-
-.icons a:hover {
-    color: #d9534f;
+    color: #5a3e36;
+    font-size: 20px;
 }
