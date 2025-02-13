@@ -1,65 +1,55 @@
-/* GENERAL STYLES */
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF5F5; /* Pastel background */
+    background-color: #fdf8f5; /* Light pastel background */
+    font-family: "Arial", sans-serif;
+    color: #6d4c41; /* Soft brown text */
 }
 
-/* HEADER STYLES */
 header {
+    background-color: #fce8e6; /* Soft pastel pink */
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #FBE4E4; /* Soft pastel color */
-    border-bottom: 2px solid #E8C4C4; /* Subtle border */
 }
 
-/* LOGO */
-header img {
-    height: 60px;
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
-/* NAVIGATION MENU */
+nav img {
+    height: 80px; /* Adjust the logo size */
+    width: auto;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-menu li {
-    position: relative;
+    display: inline-block;
 }
 
-.nav-menu li a {
+.nav-menu a {
     text-decoration: none;
+    color: #8a4f5d; /* Soft muted purple */
     font-size: 18px;
-    color: #8B5D5D; /* Matching text color */
-    padding: 10px;
-    display: block;
+    font-weight: bold;
 }
 
-/* DROPDOWN MENU */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: #FEECEC;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 180px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu li a {
+    background-color: #fce8e6;
     padding: 10px;
-    color: #8B5D5D;
+    border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
