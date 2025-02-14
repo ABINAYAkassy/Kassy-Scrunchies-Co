@@ -11,15 +11,15 @@
         }
         .banner {
             background-image: url('https://i.postimg.cc/P55JGw5D/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250213-160325-0002.png');
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-size: cover;
             background-position: center;
-            height: 250px;
+            height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             padding: 10px 30px;
             position: relative;
+            width: 100%;
         }
         .swipe-text {
             position: absolute;
@@ -31,14 +31,22 @@
             color: #5a3d5c;
             background: rgba(255, 255, 255, 0.7);
             padding: 5px;
-            border-radius: 5px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 60px;
+            width: 100%;
         }
         .nav {
             display: flex;
-            justify-content: center;
             gap: 20px;
             font-size: 18px;
             font-weight: bold;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 10px;
         }
         .nav a {
             text-decoration: none;
@@ -48,6 +56,7 @@
             display: flex;
             justify-content: flex-end;
             gap: 15px;
+            padding: 10px;
         }
         .icons i {
             font-size: 24px;
@@ -75,11 +84,13 @@
 <body>
     <header class="banner">
         <div class="swipe-text" id="swipeText"></div>
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
+        <div class="nav-container">
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
         <div class="icons">
             <i class="fas fa-search"></i>
