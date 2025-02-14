@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
         }
         .banner {
-            background-image: url('https://i.postimg.cc/jqvXL8gn/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250213-160325-0002.png');
+            background-image: url('https://i.postimg.cc/fymbd0wH/20250213-145656-0000.png');
             background-size: cover;
             background-position: center;
             height: 200px;
@@ -19,6 +19,21 @@
             justify-content: space-between;
             position: relative;
             padding: 10px 30px;
+        }
+        .swiping-text {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #5a3d5c;
+            animation: swipeText 12s infinite;
+        }
+        @keyframes swipeText {
+            0%, 33% { content: "Elevate your style"; }
+            34%, 66% { content: "with Kassy Scrunchies and Bows"; }
+            67%, 100% { content: "Bloom with Every Knot, Glow with Every Bow"; }
         }
         .nav {
             position: absolute;
@@ -45,22 +60,12 @@
             font-size: 24px;
             color: #5a3d5c;
         }
-        .swipe-text {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
-            font-weight: bold;
-            color: #5a3d5c;
-            text-align: center;
-        }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="banner">
-        <div class="swipe-text" id="swipe-text"></div>
+        <div class="swiping-text">Elevate your style</div>
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Shop</a>
@@ -74,20 +79,5 @@
             <i class="fas fa-shopping-cart"></i>
         </div>
     </header>
-
-    <script>
-        const texts = [
-            "Elevate your style",
-            "with Kassy Scrunchies and Bows",
-            "Bloom with Every Knot, Glow with Every Bow"
-        ];
-        let index = 0;
-        function changeText() {
-            document.getElementById("swipe-text").innerText = texts[index];
-            index = (index + 1) % texts.length;
-        }
-        setInterval(changeText, 4000);
-        changeText();
-    </script>
 </body>
 </html>
