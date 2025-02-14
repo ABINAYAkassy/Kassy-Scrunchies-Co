@@ -7,14 +7,14 @@ body {
     background-image: url('https://i.postimg.cc/fymbd0wH/20250213-145656-0000.png');
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 250px; /* Increased height */
     display: flex;
     position: relative;
 }
 
 .swipe-text {
     position: absolute;
-    top: 200px;
+    top: 40px; /* Adjusted to fit inside banner */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
