@@ -10,17 +10,17 @@
             font-family: Arial, sans-serif;
         }
         .banner {
-            background-image: url('https://i.postimg.cc/fymbd0wH/20250213-145656-0000.png');
+            background-image: url('https://i.postimg.cc/P55JGw5D/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250213-160325-0002.png');
             background-size: cover;
             background-position: center;
             height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
             padding: 10px 30px;
+            position: relative;
         }
-        .swiping-text {
+        .swipe-text {
             position: absolute;
             top: 10px;
             width: 100%;
@@ -28,19 +28,10 @@
             font-size: 20px;
             font-weight: bold;
             color: #5a3d5c;
-            animation: swipeText 12s infinite;
-        }
-        @keyframes swipeText {
-            0%, 33% { content: "Elevate your style"; }
-            34%, 66% { content: "with Kassy Scrunchies and Bows"; }
-            67%, 100% { content: "Bloom with Every Knot, Glow with Every Bow"; }
         }
         .nav {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
+            justify-content: center;
             gap: 20px;
             font-size: 18px;
             font-weight: bold;
@@ -50,10 +41,8 @@
             color: #5a3d5c;
         }
         .icons {
-            position: absolute;
-            bottom: 10px;
-            right: 30px;
             display: flex;
+            justify-content: flex-end;
             gap: 15px;
         }
         .icons i {
@@ -62,10 +51,26 @@
         }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const texts = [
+                "Elevate your style with Kassy Scrunchies and Bows",
+                "Handmade with love just for you",
+                "The perfect scrunchies & bows for every occasion"
+            ];
+            let index = 0;
+            function changeText() {
+                document.getElementById("swipeText").innerText = texts[index];
+                index = (index + 1) % texts.length;
+            }
+            setInterval(changeText, 4000);
+            changeText();
+        });
+    </script>
 </head>
 <body>
     <header class="banner">
-        <div class="swiping-text">Elevate your style</div>
+        <div class="swipe-text" id="swipeText"></div>
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Shop</a>
