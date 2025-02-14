@@ -1,45 +1,48 @@
 /* General Styles */
 body {
-    font-family: 'Playpen Sans', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: "Playpen Sans", sans-serif;
+    background-color: white;
 }
 
-/* Top Banner */
-.top-banner {
-    font-family: 'Playfair Display', serif;
+/* Top Scrolling Text */
+.top-text {
     text-align: center;
-    background-color: #f8f8f8;
-    padding: 10px;
+    font-family: "Playfair Display", serif;
     font-size: 16px;
-    font-weight: bold;
+    padding: 10px 0;
+    background-color: #f5f5f5;
 }
 
-/* Navbar */
+/* Logo Section */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.logo-container img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 10px 20px;
     background-color: white;
-}
-
-/* Logo */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 150px; /* Adjusted size */
-    width: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Links */
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
@@ -48,20 +51,48 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: black;
     font-size: 18px;
+    color: black;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: purple;
 }
 
 /* Icons */
 .icons {
     display: flex;
-    align-items: center;
     gap: 20px;
+    align-items: center;
 }
 
-.icons img {
-    width: 30px;
-    height: 30px;
-    filter: grayscale(100%);
+.icons i {
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: purple;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
 }
