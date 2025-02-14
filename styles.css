@@ -1,106 +1,75 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Playfair Display', serif;
+    background-color: lavender; /* Updated background */
     margin: 0;
-    padding: 0;
-    background-color: lavender;
+    font-family: 'Playpen Sans', sans-serif;
 }
 
-/* Top Announcement Bar */
-.announcement-bar {
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-    background-color: #f8f8f8;
-    font-weight: bold;
-}
-
-/* Navbar */
+/* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between elements */
     align-items: center;
     padding: 10px 20px;
-    background-color: lavender;
+    background: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
-/* Navigation container */
-.nav-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
+/* Logo Styling */
+.navbar-logo img {
+    max-width: 320px;  /* Increased logo size */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Ensures centering */
 }
 
-/* Left Navigation Links */
+/* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
+    gap: 25px; /* Even spacing */
 }
 
 .nav-links a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-    font-family: 'Playpen Sans', sans-serif;
     font-weight: bold;
 }
 
-/* Center Logo */
-.logo-container {
-    flex: 1;
-    text-align: center;
+.nav-links a:hover {
+    color: purple; /* Aesthetic hover effect */
 }
 
-.logo-container img {
-    max-width: 250px;  /* Increased logo size */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Right-Side Icons */
-.icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+/* Icons Section */
+.nav-icons {
+    display: flex !important;  /* Ensure visibility */
     justify-content: flex-end;
-    flex: 1;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Aesthetic Outline Icons */
-.icon {
-    width: 30px;  /* Increased icon size */
-    height: 30px;
-    cursor: pointer;
+.nav-icons img {
+    width: 30px; /* Adjust icon size */
+    height: auto;
 }
 
-/* Mobile Navigation */
-.mobile-menu {
-    display: none;
-}
-
-/* Responsive Design */
+/* Responsive Fixes */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-menu {
-        display: block;
-        cursor: pointer;
-    }
-    
-    .logo-container {
-        text-align: center;
+    .navbar {
+        flex-direction: column;
     }
 
-    .icons {
-        display: flex;
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .nav-icons {
+        justify-content: center;
+    }
+
+    .navbar-logo img {
+        max-width: 250px; /* Adjusted for mobile */
     }
 }
