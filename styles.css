@@ -1,39 +1,36 @@
-/* General Styles */
+/* General styles */
 body {
+    font-family: 'Playfair Display', serif;
     margin: 0;
-    font-family: "Playpen Sans", sans-serif;
-    background-color: #E6E6FA; /* Lavender background */
+    padding: 0;
+    background-color: lavender;
 }
 
-/* Top Scrolling Text */
-.top-text {
+/* Top Announcement Bar */
+.announcement-bar {
     text-align: center;
-    font-family: "Playfair Display", serif;
     font-size: 16px;
-    padding: 10px 0;
-    background-color: #f5f5f5;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-weight: bold;
 }
 
-/* Logo Section */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.logo-container img {
-    max-width: 320px; /* Increased size */
-    height: auto;
-}
-
-/* Navigation Bar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #E6E6FA; /* Lavender background */
+    background-color: lavender;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation container */
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* Navigation Links */
@@ -45,88 +42,60 @@ body {
     margin: 0;
 }
 
-.nav-links li {
-    display: inline;
-}
-
 .nav-links a {
     text-decoration: none;
-    font-size: 18px;
     color: black;
+    font-size: 18px;
+    font-family: 'Playpen Sans', sans-serif;
     font-weight: bold;
-    font-family: "Playpen Sans", sans-serif;
-    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: purple;
+/* Center Logo */
+.logo-container {
+    flex-grow: 1;
+    text-align: center;
 }
 
-/* Icons */
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Icons on the Right */
 .icons {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.icons i {
-    font-size: 22px;
-    color: black;
+/* Aesthetic Outline Icons */
+.icon {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.icons i:hover {
-    color: purple;
 }
 
 /* Mobile Navigation */
-.menu-toggle {
+.mobile-menu {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
+@media (max-width: 768px) {
     .nav-links {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #E6E6FA;
-        padding: 10px 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .logo-container {
         text-align: center;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-
     .icons {
-        margin-top: 10px;
-    }
-
-    .logo-container {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: flex;
     }
 }
