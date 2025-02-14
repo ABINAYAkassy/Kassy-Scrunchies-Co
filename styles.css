@@ -1,75 +1,78 @@
 /* General Styles */
 body {
-    background-color: lavender; /* Updated background */
-    margin: 0;
     font-family: 'Playpen Sans', sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navbar Styles */
-.navbar {
+/* Header Styles */
+.header {
     display: flex;
-    justify-content: space-between; /* Space between elements */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Styling */
-.navbar-logo img {
-    max-width: 320px;  /* Increased logo size */
+/* Logo */
+.logo img {
+    max-width: 200px; /* Adjusted size */
     height: auto;
     display: block;
-    margin: 0 auto; /* Ensures centering */
 }
 
-/* Navigation Links */
-.nav-links {
+/* Navigation Bar */
+.navbar {
     display: flex;
-    gap: 25px; /* Even spacing */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: purple; /* Aesthetic hover effect */
-}
-
-/* Icons Section */
-.nav-icons {
-    display: flex !important;  /* Ensure visibility */
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-.nav-icons img {
-    width: 30px; /* Adjust icon size */
-    height: auto;
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Responsive Fixes */
-@media (max-width: 768px) {
+.navbar a:hover {
+    color: #6a0dad;
+}
+
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
     .navbar {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
     }
 
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .navbar.active {
+        display: flex;
     }
 
-    .nav-icons {
-        justify-content: center;
-    }
-
-    .navbar-logo img {
-        max-width: 250px; /* Adjusted for mobile */
+    .menu-icon {
+        display: block;
     }
 }
