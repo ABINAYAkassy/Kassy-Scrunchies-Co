@@ -2,10 +2,10 @@
 body {
     margin: 0;
     font-family: "Playpen Sans", sans-serif;
-    background-color: lavender;
+    background-color: #E6E6FA; /* Lavender background */
 }
 
-/* Top Swiping Text */
+/* Top Scrolling Text */
 .top-text {
     text-align: center;
     font-family: "Playfair Display", serif;
@@ -22,7 +22,7 @@ body {
 }
 
 .logo-container img {
-    max-width: 300px; /* Increased from 250px */
+    max-width: 320px; /* Increased size */
     height: auto;
 }
 
@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: lavender;
+    background-color: #E6E6FA; /* Lavender background */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,8 +54,8 @@ body {
     font-size: 18px;
     color: black;
     font-weight: bold;
-    transition: color 0.3s ease;
     font-family: "Playpen Sans", sans-serif;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -81,12 +81,13 @@ body {
 }
 
 /* Mobile Navigation */
-.menu-button {
+.menu-toggle {
     display: none;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -94,24 +95,38 @@ body {
         padding: 10px;
     }
 
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        width: 100%;
-        background-color: lavender;
         position: absolute;
         top: 60px;
         left: 0;
+        width: 100%;
+        background-color: #E6E6FA;
         padding: 10px 0;
+        text-align: center;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .menu-button {
-        display: block;
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
