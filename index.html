@@ -4,100 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kassy Scrunchies & Co</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Playpen Sans', cursive;
         }
-        .banner {
-            background-image: url('https://i.postimg.cc/P55JGw5D/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250213-160325-0002.png');
+        .header {
+            background-image: url('https://i.postimg.cc/Jh1jynxc/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250214-083404-0003.png');
             background-size: cover;
             background-position: center;
-            height: 200px;
+            height: 300px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding: 10px 30px;
-            position: relative;
-            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 10px;
         }
-        .swipe-text {
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #EDE4F4;
+            padding: 10px 0;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #EDE4F4;
+        }
+        .icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .banner-text {
             position: absolute;
             top: 10px;
             width: 100%;
             text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: #5a3d5c;
-            background: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.8);
             padding: 5px;
         }
-        .nav-container {
-            display: flex;
-            justify-content: center;
+        .banner-swiper {
             position: absolute;
-            top: 60px;
+            top: 50px;
             width: 100%;
-        }
-        .nav {
-            display: flex;
-            gap: 20px;
-            font-size: 18px;
+            text-align: center;
+            font-size: 16px;
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #5a3d5c;
-        }
-        .icons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
-            padding: 10px;
-        }
-        .icons i {
-            font-size: 24px;
-            color: #5a3d5c;
+            color: #5A3E77;
         }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const texts = [
-                "Enjoy free delivery on all orders above ₹500.",
-                "For international orders, reach out to us on Instagram or WhatsApp.",
-                "We welcome bulk and wholesale orders with special discounts!"
-            ];
-            let index = 0;
-            function changeText() {
-                document.getElementById("swipeText").innerText = texts[index];
-                index = (index + 1) % texts.length;
-            }
-            setInterval(changeText, 4000);
-            changeText();
-        });
-    </script>
 </head>
 <body>
-    <header class="banner">
-        <div class="swipe-text" id="swipeText"></div>
-        <div class="nav-container">
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Shop</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <div class="icons">
-            <i class="fas fa-search"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>
-        </div>
-    </header>
+    <div class="header">
+        <div class="banner-text">For international orders, reach out to us on Instagram or WhatsApp.</div>
+        <div class="banner-swiper" id="bannerText">Enjoy free delivery on all orders above ₹500.</div>
+    </div>
+    <div class="nav">
+        <span>HOME</span>
+        <span>SHOP</span>
+        <span>ABOUT US</span>
+        <span>CONTACT</span>
+    </div>
+    <div class="icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Wishlist">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Login">
+        <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart">
+    </div>
+    <script>
+        let texts = [
+            "Enjoy free delivery on all orders above ₹500.",
+            "For international orders, reach out to us on Instagram or WhatsApp.",
+            "We welcome bulk and wholesale orders with special discounts!"
+        ];
+        let index = 0;
+        function updateBannerText() {
+            index = (index + 1) % texts.length;
+            document.getElementById("bannerText").textContent = texts[index];
+        }
+        setInterval(updateBannerText, 4000);
+    </script>
 </body>
 </html>
