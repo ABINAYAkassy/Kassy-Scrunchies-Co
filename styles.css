@@ -1,62 +1,70 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Playpen Sans', sans-serif;
 }
 
-.banner {
-    background-image: url('https://i.postimg.cc/fymbd0wH/20250213-145656-0000.png');
-    background-size: cover;
-    background-position: center;
-    height: 250px; /* Increased height */
-    display: flex;
-    position: relative;
-}
-
-.swipe-text {
-    position: absolute;
-    top: 40px; /* Adjusted to fit inside banner */
-    left: 50%;
-    transform: translateX(-50%);
+/* Swiping Text */
+.swiping-text-container {
+    width: 100%;
     text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #5a3d5c;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 15px;
-    border-radius: 8px;
+    background: #f8f8f8;
+    padding: 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
 }
 
-.nav {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Navigation Bar */
+.navbar {
     display: flex;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 15px;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav a {
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
     text-decoration: none;
-    color: #5a3d5c;
+    font-size: 18px;
+    color: black;
 }
 
-.icons {
-    position: absolute;
-    bottom: 10px;
-    right: 30px;
+.nav-icons {
     display: flex;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 15px;
-    border-radius: 10px;
 }
 
-.icons i {
-    font-size: 24px;
-    color: #5a3d5c;
+.nav-icons img {
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
 }
