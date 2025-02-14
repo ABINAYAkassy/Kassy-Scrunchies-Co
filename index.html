@@ -3,55 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kassy's</title>
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playpen+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Playpen+Sans:wght@400;600&display=swap">
 </head>
 <body>
-
-    <!-- Swiping Text Section -->
-    <div class="swiping-text-container">
-        <div class="swiping-text">
-            <p>Enjoy free delivery on all orders above ₹500.</p>
-            <p>For customized or international orders, reach out to us on Instagram or WhatsApp.</p>
-            <p>We welcome bulk and wholesale orders with special discounts!</p>
-        </div>
+    <div class="top-banner">
+        <p>For customized or international orders, reach out to us on Instagram or WhatsApp.</p>
     </div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://i.postimg.cc/ncPf3RM6/Kassy-S-20250214-111511-0000.png" alt="Kassy's Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="nav-icons">
-            <img src="search-icon.svg" alt="Search">
-            <img src="wishlist-icon.svg" alt="Wishlist">
-            <img src="login-icon.svg" alt="Login">
-            <img src="cart-icon.svg" alt="Cart">
-        </div>
-    </nav>
-
-    <script>
-        // Swiping Text Animation
-        $(document).ready(function() {
-            $('.swiping-text').slick({
-                autoplay: true,
-                autoplaySpeed: 4000,
-                fade: true,
-                arrows: false,
-                dots: false
-            });
-        });
-    </script>
-
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://i.postimg.cc/xCzPSdPv/1000013244-Photoroom.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <img src="search-icon.png" alt="Search"> <span>Search</span>
+                <img src="wishlist-icon.png" alt="Wishlist"> <span>Wishlist</span>
+                <img src="login-icon.png" alt="Login"> <span>Login</span>
+                <img src="cart-icon.png" alt="Cart"> <span>Cart</span>
+            </div>
+        </nav>
+    </header>
 </body>
 </html>
