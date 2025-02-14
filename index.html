@@ -17,51 +17,50 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 10px 30px;
             position: relative;
+            padding: 10px 30px;
         }
         .nav {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: center;
             gap: 20px;
             font-size: 18px;
             font-weight: bold;
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
         }
         .nav a {
             text-decoration: none;
             color: #5a3d5c;
         }
         .icons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
             position: absolute;
             bottom: 10px;
             right: 30px;
+            display: flex;
+            gap: 15px;
         }
         .icons i {
             font-size: 24px;
             color: #5a3d5c;
         }
-        .text-slider {
+        .swipe-text {
             position: absolute;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 20px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
             font-weight: bold;
             color: #5a3d5c;
+            text-align: center;
         }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="banner">
-        <div class="text-slider" id="text-slider">Elevate your style</div>
+        <div class="swipe-text" id="swipe-text"></div>
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Shop</a>
@@ -75,6 +74,7 @@
             <i class="fas fa-shopping-cart"></i>
         </div>
     </header>
+
     <script>
         const texts = [
             "Elevate your style",
@@ -83,10 +83,11 @@
         ];
         let index = 0;
         function changeText() {
-            document.getElementById("text-slider").innerText = texts[index];
+            document.getElementById("swipe-text").innerText = texts[index];
             index = (index + 1) % texts.length;
         }
         setInterval(changeText, 4000);
+        changeText();
     </script>
 </body>
 </html>
