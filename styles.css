@@ -33,13 +33,14 @@ body {
     justify-content: space-between;
 }
 
-/* Navigation Links */
+/* Left Navigation Links */
 .nav-links {
     display: flex;
     gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0;
+    flex: 1;
 }
 
 .nav-links a {
@@ -52,7 +53,7 @@ body {
 
 /* Center Logo */
 .logo-container {
-    flex-grow: 1;
+    flex: 1;
     text-align: center;
 }
 
@@ -61,11 +62,13 @@ body {
     height: auto;
 }
 
-/* Icons on the Right */
+/* Right-Side Icons */
 .icons {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 /* Aesthetic Outline Icons */
