@@ -3,94 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kassy Scrunchies & Co</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Playpen Sans', cursive;
-        }
-        .header {
-            background-image: url('https://i.postimg.cc/Jh1jynxc/Elevate-Every-Look-with-Handmade-Scrunchies-Bows-20250214-083404-0003.png');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding-bottom: 10px;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #EDE4F4;
-            padding: 10px 0;
-        }
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px 0;
-            background-color: #EDE4F4;
-        }
-        .icons img {
-            width: 24px;
-            height: 24px;
-        }
-        .banner-text {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px;
-        }
-        .banner-swiper {
-            position: absolute;
-            top: 50px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: #5A3E77;
-        }
-    </style>
+    <title>Kassy's</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Playpen+Sans:wght@400;600&display=swap">
 </head>
 <body>
-    <div class="header">
-        <div class="banner-text">For international orders, reach out to us on Instagram or WhatsApp.</div>
-        <div class="banner-swiper" id="bannerText">Enjoy free delivery on all orders above ₹500.</div>
+
+    <!-- Swiping Text Section -->
+    <div class="swiping-text-container">
+        <div class="swiping-text">
+            <p>Enjoy free delivery on all orders above ₹500.</p>
+            <p>For customized or international orders, reach out to us on Instagram or WhatsApp.</p>
+            <p>We welcome bulk and wholesale orders with special discounts!</p>
+        </div>
     </div>
-    <div class="nav">
-        <span>HOME</span>
-        <span>SHOP</span>
-        <span>ABOUT US</span>
-        <span>CONTACT</span>
-    </div>
-    <div class="icons">
-        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search">
-        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Wishlist">
-        <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Login">
-        <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart">
-    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ncPf3RM6/Kassy-S-20250214-111511-0000.png" alt="Kassy's Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <img src="search-icon.svg" alt="Search">
+            <img src="wishlist-icon.svg" alt="Wishlist">
+            <img src="login-icon.svg" alt="Login">
+            <img src="cart-icon.svg" alt="Cart">
+        </div>
+    </nav>
+
     <script>
-        let texts = [
-            "Enjoy free delivery on all orders above ₹500.",
-            "For international orders, reach out to us on Instagram or WhatsApp.",
-            "We welcome bulk and wholesale orders with special discounts!"
-        ];
-        let index = 0;
-        function updateBannerText() {
-            index = (index + 1) % texts.length;
-            document.getElementById("bannerText").textContent = texts[index];
-        }
-        setInterval(updateBannerText, 4000);
+        // Swiping Text Animation
+        $(document).ready(function() {
+            $('.swiping-text').slick({
+                autoplay: true,
+                autoplaySpeed: 4000,
+                fade: true,
+                arrows: false,
+                dots: false
+            });
+        });
     </script>
+
 </body>
 </html>
