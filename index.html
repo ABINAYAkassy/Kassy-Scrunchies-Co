@@ -26,6 +26,10 @@
             gap: 20px;
             font-size: 18px;
             font-weight: bold;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
         }
         .nav a {
             text-decoration: none;
@@ -35,9 +39,21 @@
             display: flex;
             justify-content: flex-end;
             gap: 15px;
+            position: absolute;
+            bottom: 10px;
+            right: 30px;
         }
         .icons i {
             font-size: 24px;
+            color: #5a3d5c;
+        }
+        .text-slider {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
             color: #5a3d5c;
         }
     </style>
@@ -45,6 +61,7 @@
 </head>
 <body>
     <header class="banner">
+        <div class="text-slider" id="text-slider">Elevate your style</div>
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Shop</a>
@@ -58,5 +75,18 @@
             <i class="fas fa-shopping-cart"></i>
         </div>
     </header>
+    <script>
+        const texts = [
+            "Elevate your style",
+            "with Kassy Scrunchies and Bows",
+            "Bloom with Every Knot, Glow with Every Bow"
+        ];
+        let index = 0;
+        function changeText() {
+            document.getElementById("text-slider").innerText = texts[index];
+            index = (index + 1) % texts.length;
+        }
+        setInterval(changeText, 4000);
+    </script>
 </body>
 </html>
